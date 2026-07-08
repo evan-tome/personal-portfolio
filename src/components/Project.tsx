@@ -1,8 +1,11 @@
-function Project({ title, description}) {
+import type { ProjectData } from "./Projects";
+
+function Project({ project }: { project: ProjectData }) {
     return (
         <div className="project">
-            <h2>{title}</h2>
-            <div>{description}</div>
+            <h2>{project.name}</h2>
+            <div>{project.timeline}</div>
+            <div>{project.description}</div>
         </div>
     );
 }
